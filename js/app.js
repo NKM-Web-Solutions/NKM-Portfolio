@@ -8,12 +8,12 @@ window.addEventListener("load", (event) => {
         <nav role="navigation">
                 <ul class="nav">
                     <div class="links-row">
-                        <li><img src="../assets/images/nkm-logo.svg" alt="NK Media"></li>
+                        <li><img src="../assets/images/nkm-logo_v02.svg" class="nav-logo" alt="NKM Webdev"></li>
                         <li>Home</li>
                         <li>About</li>
                         <li>Case Studies</li>
                     </div>
-                    <li class="source-bold">+ Let's Work Together</li>
+                    <li class="source-bold">+ Check Availability</li>
                 </ul>
             </nav>
         `;

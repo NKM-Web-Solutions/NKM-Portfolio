@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>NKM Web Design and Web Development</title>
+        <title>NKM WebDev</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/app.js"></script>
     </head>
@@ -66,10 +67,13 @@
             </div>
             <div class="home__about">
                 <div class="home__about-row">
-                    <div class="content">
-                        <h2>Quick <span class="bracket">&lcub;</span> READ.me <span class="bracket">&rcub;</span></h2>
-                        <p>I've been working in web development for over 7 years. I love designing user interfaces using my education in UX/UI, backed by data-driven research in psychology. Truly I love bringing projects to life through full-stack web development even more.</p>
+                    <div class="bg">
+                        <div class="content">
+                            <h2>Quick <span class="bracket">&lcub;</span> READ.me <span class="bracket">&rcub;</span></h2>
+                            <p>I've been working in web development for over 7 years. I love designing user interfaces using my education in UX/UI, backed by data-driven research in psychology. Truly I love bringing projects to life through full-stack web development even more.</p>
+                        </div>
                     </div>
+                    
                     <img src="assets/images/me.png" alt="Self Portrait - Natalie Kappele-Miller">
                     <div class="home__about-vector"></div>
                 </div>
@@ -163,13 +167,57 @@
                     <p>9 languages (and counting++)</p>
                 </div>
             </div>
-            <div class="home__cta">
+            <!-- <div class="home__cta">
                 <div class="home__cta-vector-1"></div>
                 <div class="home__cta-wrapper">
                     <div class="content">
                         <h2>Ready for a Beautiful, Impactful Website?</h2>
                         <button class="button-primary">+ Check Availability</button>
                     </div>
+                </div>
+                <div class="home__cta-vector-2"></div>
+            </div> -->
+            <div class="home__form">
+                <div class="home__cta-vector-1"></div>
+                <div class="home__form-row">
+                    <div class="content">
+                        <h2>Ready for a Beautiful, Impactful Website?</h2>
+                        <p>Please fill out all of the form fields to connect with me about your web project.</p>
+                    </div>
+                    <form
+                    action="https://formspree.io/f/xleqagzd"
+                    method="POST"
+                    >
+                    <div class="form-field-row">
+                        <div class="form-field">
+                            <label for="firstName">
+                                First Name
+                            </label>
+                            <input type="text" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="lastName">
+                                Last Name
+                            </label>
+                            <input type="text" name="lastName" placeholder="Smith" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">
+                            Email   
+                        </label>
+                        <input type="email" name="email" placeholder="johnsmith@example.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">
+                            Tell Me A Little Bit About Your Project
+                        </label>
+                        <textarea name="message" placeholder="I want a show-stopping web page for my business"></textarea>
+                    </div>
+                    
+                    <!-- your other form fields go here -->
+                    <button class="button-primary" type="submit">+ Submit</button>
+                    </form>
                 </div>
                 <div class="home__cta-vector-2"></div>
             </div>

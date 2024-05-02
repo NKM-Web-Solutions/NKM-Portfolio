@@ -5,6 +5,12 @@ window.addEventListener("load", (event) => {
     let aboutPage = document.getElementById("about");
 
     let pages = [index, cpPage, ambassadorsPage, aboutPage];
+    let mainCta = document.getElementById("cta-main");
+    let navCta = document.getElementById("cta-nav");
+
+    if(mainCta) {
+        mainCta.addEventListener("click", scrollToForm);
+    }
 
     let nav = `
         <nav role="navigation">
@@ -23,7 +29,7 @@ window.addEventListener("load", (event) => {
                     <li><a href="/about.html">About Me</a></li>
                     <li><a href="/cp.html">Case Studies</a></li>
                 </div>
-                <li class="source-bold">+ Check Availability</li>
+                <li class="source-bold"><a href="/#form-section">+ Check Availability</a></li>
             </ul>
         </nav>
     `;
@@ -52,21 +58,12 @@ window.addEventListener("load", (event) => {
         </footer>
     `;
 
-    function toggleMenu(){
-        console.log(menu.style.display)
-        if(menu.style.display == "none") {
-            menu.classList.add("nav-collapse--open");
-        } else {
-            menu.classList.remove("nav-collapse--open")
-        }
-        
-        
+    function scrollToForm(){
+        let formSection = document.getElementById("form-section");
+        formSection.scrollIntoView({
+            behavior: "smooth"
+        });
     }
-
-    
-    
-
-
 
     pages.forEach((page) => {
         if(page) { 
@@ -74,7 +71,6 @@ window.addEventListener("load", (event) => {
             page.insertAdjacentHTML("beforeend", footer);
             let menuToggle = document.getElementById("toggle-menu");
             let menu = document.getElementById("nav-menu");
-            console.log(menu)
             if (menu && window.innerWidth < 499) { 
                 menu.style.visibility = "hidden"
                 menu.style.padding = "0"

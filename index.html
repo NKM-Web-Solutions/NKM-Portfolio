@@ -185,8 +185,9 @@
                         <p>Please fill out all of the form fields to connect with me about your web project.</p>
                     </div>
                     <form
-                    action="https://formspree.io/f/xleqagzd"
-                    method="POST"
+                        action="https://formspree.io/f/xleqagzd"
+                        method="POST"
+                        id="contact-form"
                     >
                     <div class="form-field-row">
                         <div class="form-field">
@@ -206,7 +207,8 @@
                         <label for="email">
                             Email   
                         </label>
-                        <input type="email" name="email" placeholder="johnsmith@example.com" required>
+                        <input type="email" name="email" id="email" placeholder="johnsmith@example.com" required>
+                        <p class="error-message hidden" id="emailError">*Please enter a valid email</p>
                     </div>
                     <div class="form-field">
                         <label for="message">

@@ -65,6 +65,23 @@ window.addEventListener("load", (event) => {
         });
     }
 
+    function submitForm(e){
+        e.preventDefault();
+
+        let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let email = document.getElementById("email");
+        let emailError = document.getElementById("emailError");
+        if(!email.value.match(emailPattern)) {
+            emailError.classList.remove("hidden");
+        } else {
+            emailError.classList.add("hidden");
+            form.submit();
+        }
+    }
+
+    let form = document.getElementById("contact-form");
+    if(form) form.addEventListener("submit", submitForm)
+
     pages.forEach((page) => {
         if(page) { 
             page.insertAdjacentHTML("afterbegin", nav);

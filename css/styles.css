@@ -827,6 +827,14 @@ textarea {
     width: calc(50% - 10px)
 }
 
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: #FF9188
+}
+
 @media (max-width: 499px) {
     h1, h2, .home__form h2 {
         font-size: 30px;

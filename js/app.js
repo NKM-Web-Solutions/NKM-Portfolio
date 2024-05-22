@@ -37,23 +37,26 @@ window.addEventListener("load", (event) => {
     let footer = `
         <footer>
             <div class="home__footer-wrapper">
-                <div class="home__footer-group">
-                    <a href="/"><img src="../assets/images/nkm-logo_v02.svg" alt="NKM Webdev"></a>
+                <div class="home__footer-row">
+                    <div class="home__footer-group">
+                        <a href="/"><img src="../assets/images/nkm-logo_v02.svg" alt="NKM Webdev"></a>
+                    </div>
+                    <div class="home__footer-group">
+                        <h4>Links</h4>
+                        <ul class="home__footer-links">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about.html">About Me</a></li>
+                            <li><a href="/cp.html">Case Studies</a></li>
+                        </ul>
+                    </div>
+                    <div class="home__footer-group">
+                        <h4>Contact</h4>
+                        <ul class="home__footer-links">
+                            <li><a href="/#form-section">Fill Out Form</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="home__footer-group">
-                    <h4>Links</h4>
-                    <ul class="home__footer-links">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about.html">About Me</a></li>
-                        <li><a href="/cp.html">Case Studies</a></li>
-                    </ul>
-                </div>
-                <div class="home__footer-group">
-                    <h4>Contact</h4>
-                    <ul class="home__footer-links">
-                        <li>someemail@test.com</li>
-                    </ul>
-                </div>
+                <li class="source-bold"><a href="/#form-section">+ Check Availability</a></li>
             </div>
         </footer>
     `;
@@ -80,7 +83,24 @@ window.addEventListener("load", (event) => {
     }
 
     let form = document.getElementById("contact-form");
-    if(form) form.addEventListener("submit", submitForm)
+    if(form) form.addEventListener("submit", submitForm);
+    console.log(document.querySelector(".slide"))
+
+    if(index) {
+        document.addEventListener("scroll", function() {
+            let slides = document.getElementById("stack-section");
+            let rect = slides.getBoundingClientRect();
+            if(rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                let slider = document.getElementById("slider");
+                slider.style.display = "grid";
+                // setInterval(() => {
+                //     slider.style.display = "none";
+                //     slider.style.display = "grid";
+                // }, 16000)
+            }
+        })
+        
+    }
 
     pages.forEach((page) => {
         if(page) { 

@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3 {
     color: #fff;
-    margin: 0;
+    margin: 0 0 6px;
     font-family: 'Belfast Grotesk', sans-serif;
 }
 
@@ -168,7 +168,8 @@ button {
 }
 
 .home__hero__row,
-.home__about-row {
+.home__about-row,
+.about__hero-row {
     display: flex;
     align-items: center;
     position: absolute;
@@ -179,13 +180,22 @@ button {
 /* #222222
 #383838 */
 
-.home__about-row .content {
-    
+.home__about-row {
+    padding: 50px 0 50px 50px;
 }
 
-.home__about-row {
+.home__about-row,
+.about__hero-row {
     background: linear-gradient(#222222,#383838);
-    padding: 50px 0 50px 50px;
+}
+
+.about__hero-row {
+    padding: 0 0 0 50px;
+}
+
+.about__hero-row h1 {
+font-size: 4rem;
+line-height: 4.2rem;
 }
 
 .bracket {
@@ -362,6 +372,16 @@ footer {
 .home__footer-wrapper {
     padding: 86px 0 115px;
     display: flex;
+    justify-content: space-between;
+}
+
+.home__footer-row {
+    display: flex;
+}
+
+footer li a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .home__footer-links {
@@ -566,7 +586,8 @@ footer h4 {
 }
 
 .vertical-slider {
-    display: grid;
+    display: none;
+    /* display: grid; */
   min-height: 180px;
   max-height: 447px;
   -webkit-mask-box-image: -webkit-linear-gradient(
@@ -833,6 +854,21 @@ textarea {
 
 .error-message {
     color: #FF9188
+}
+
+.about__hero-section {
+    position: relative;
+    padding-bottom: 46%;
+}
+
+.about__paragraph {
+    margin-left: 50px;
+    max-width: 746px;
+    margin-bottom: 0.5rem;
+}
+
+.about__wrapper {
+    margin-bottom: 100px;
 }
 
 @media (max-width: 499px) {

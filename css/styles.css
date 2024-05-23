@@ -586,9 +586,10 @@ footer h4 {
 }
 
 .vertical-slider {
-    display: none;
-    /* display: grid; */
-  min-height: 180px;
+    visibility: hidden;
+    /* display: none; */
+    display: grid;
+  min-height: 140px;
   max-height: 447px;
   -webkit-mask-box-image: -webkit-linear-gradient(
     top, transparent, transparent 0, white 10%, white 80%, transparent 100%);
@@ -697,47 +698,24 @@ footer h4 {
     opacity: 0;
   }
 }
-
-@keyframes slideUp2 {
-    0% {
-      transform: translateY(100%) scale(0.5);
-      opacity: 0;
-    }
    
-    5%,
-    20% {
-      transform: translateY(100%) scale(0.7);
-      opacity: 0.4;
-    }
-   
-    25%,
-    40% {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-   
-    45%,
-    60% {
-      transform: translateY(-100%) scale(0.7);
-      opacity: 0.4;
-    }
-
-    65%,
-  100% {
-    transform: translateY(-100%) scale(0.5);
-    opacity: 0;
-  }
-}
-   
-
 .vertical-span {
-    height: 300px;
+    visibility: hidden;
+    height: 0;
+    /* height: 300px; */
     width: 2px;
     background: #fff;
     position: absolute;
     left: 15px;
     z-index: -1;
     top: 30px;
+    transition: all 300ms ease;
+}
+
+.vertical-span--open {
+    height: 300px;
+    visibility: visible;
+    transition: all 300ms ease;
 }
 
 /* .slide-0 {

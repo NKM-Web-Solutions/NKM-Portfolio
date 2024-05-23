@@ -92,11 +92,13 @@ window.addEventListener("load", (event) => {
             let rect = slides.getBoundingClientRect();
             if(rect.top >= 0 && rect.bottom <= window.innerHeight) {
                 let slider = document.getElementById("slider");
-                slider.style.display = "grid";
+                let sliderPole = document.getElementById("slider-pole");
+                slider.style.visibility = "visible";
+                sliderPole.classList.add("vertical-span--open");
                 // setInterval(() => {
                 //     slider.style.display = "none";
                 //     slider.style.display = "grid";
-                // }, 16000)
+                // }, 22000)
             }
         })
         
